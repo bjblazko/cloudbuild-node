@@ -9,6 +9,6 @@ steps:
   - deploy
   - hello-world
   - --region=europe-west1
-  - --source=.
+  - --source=./hello
   - --trigger-http
   - --runtime=nodejs16
