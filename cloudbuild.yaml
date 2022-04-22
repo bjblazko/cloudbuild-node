@@ -12,3 +12,13 @@ steps:
   - --source=./hello
   - --trigger-http
   - --runtime=nodejs16
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - helloAnother
+  - --region=europe-west1
+  - --source=./hello2
+  - --trigger-http
+  - --runtime=nodejs16
