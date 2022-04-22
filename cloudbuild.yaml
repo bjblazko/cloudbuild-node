@@ -2,3 +2,13 @@ steps:
 - name: node
   entrypoint: npm
   args: ['install']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - hello-world
+  - --region=europe-west1
+  - --source=./app.js
+  - --trigger-http
+  - --runtime=nodejs16
